@@ -2,13 +2,10 @@
 
 ## 📌 프로젝트 개요
 
-이 프로젝트는 **OpenAI GPT API의 Function Calling과 Structured Outputs 기능**을 활용하여,
+- 이 프로젝트는 **OpenAI GPT API의 Function Calling과 Structured Outputs 기능**을 활용하여,
 사용자의 자연어 질문 의도를 파악하고 적절한 API(tool)를 호출한 뒤, 그 결과를 기반으로 **정확하고 일관된 응답을 생성하는 챗봇/에이전트 시스템**을 구현하는 것을 목표로 합니다.
 
-본 저장소는 FastAPI 기반의 **배송 조회, 상품 조회, 주문 조회 API**와 이를 호출하는 **LLM 기반 에이전트**, 그리고 Streamlit UI 데모를 포함합니다.
----
-
-## 🧠 핵심 개념
+- 본 저장소는 FastAPI 기반의 **배송 조회, 상품 조회, 주문 조회 API**와 이를 호출하는 **LLM 기반 에이전트**, 그리고 Streamlit UI 데모를 포함합니다.
 
 ### 1. GPT + Tools(Function Calling)
 
@@ -24,13 +21,10 @@ GPT는 다음과 같은 흐름으로 동작합니다:
 * "서울 날씨 알려줘" → `get_weather(location="서울")`
 * "상품번호 1234567890 찾아줘" → `get_product(product_no=1234567890)`
 
----
-
 ### 2. Structured Outputs
 
-Structured Outputs 기능을 사용하면 **주어진 JSON Schema를 100% 준수하는 응답**을 생성할 수 있습니다.
+- Structured Outputs 기능을 사용하면 **주어진 JSON Schema를 100% 준수하는 응답**을 생성할 수 있습니다.
     - 이를 통해 파싱 오류 없이 **안정적인 API 연동**이 가능
----
 
 ## 🧩 데모 API 구성 (FastAPI)
 
@@ -54,7 +48,6 @@ Structured Outputs 기능을 사용하면 **주어진 JSON Schema를 100% 준수
   * `IN_DELIVERY` : 배송 중
   * `DELIVERED` : 배송 완료
 
----
 
 ### 2️⃣ 상품 조회 API
 
@@ -74,7 +67,6 @@ Structured Outputs 기능을 사용하면 **주어진 JSON Schema를 100% 준수
   * `NORMAL` : 정상
   * `OUT_OF_STOCK` : 품절
 
----
 
 ### 3️⃣ 주문 조회 API
 
@@ -99,7 +91,6 @@ Structured Outputs 기능을 사용하면 **주어진 JSON Schema를 100% 준수
   * `COMPLETED` : 주문 완료
   * `CANCELLED` : 주문 취소
 
----
 
 ## 🤖 GPT 에이전트 동작 구조
 
@@ -111,7 +102,6 @@ Structured Outputs 기능을 사용하면 **주어진 JSON Schema를 100% 준수
 
 `globals()[tool_name](**arguments)` 패턴을 사용하여 **유연한 함수 호출 구조**를 구현
 
----
 
 ## 🖥 Streamlit UI 데모
 
