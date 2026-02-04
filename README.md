@@ -7,6 +7,9 @@
 
 - 본 저장소는 FastAPI 기반의 **배송 조회, 상품 조회, 주문 조회 API**와 이를 호출하는 **LLM 기반 에이전트**, 그리고 Streamlit UI 데모를 포함합니다.
 
+## AI-Shopping-Helper 아키텍처
+![alt text](image.png)
+
 ### 1. GPT + Tools(Function Calling)
 
 GPT는 다음과 같은 흐름으로 동작합니다:
@@ -14,12 +17,7 @@ GPT는 다음과 같은 흐름으로 동작합니다:
 1. 사용자 입력으로부터 **질문 의도 파악**
 2. 의도에 맞는 **tool(function) 선택 및 파라미터 생성**
 3. 외부 API(FastAPI 서버) 호출
-4. 응답 결과를 기반으로 **자연어 답변 생성** fileciteturn0file0
-
-예시:
-
-* "서울 날씨 알려줘" → `get_weather(location="서울")`
-* "상품번호 1234567890 찾아줘" → `get_product(product_no=1234567890)`
+4. 응답 결과를 기반으로 **자연어 답변 생성**
 
 ### 2. Structured Outputs
 
