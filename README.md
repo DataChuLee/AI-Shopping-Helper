@@ -98,17 +98,16 @@ GPT는 다음과 같은 흐름으로 동작합니다:
 4. API 응답을 context로 재질문
 5. 최종 자연어 응답 생성
 
-`globals()[tool_name](**arguments)` 패턴을 사용하여 **유연한 함수 호출 구조**를 구현
-
+`globals()[tool_name](**arguments)` 패턴을 사용하여 **유연한 함수 호출 구조** 구현
 
 ## 🖥 Streamlit UI 데모
+![demo](./images/demo_1.png)
+![demo](./images/demo_2.png)
+
 
 * 기본 챗봇 (자유 질의 응답)
 * Function Calling 챗봇 (API 연동)
 * System Message를 활용한 **말투 제어**
-
-  * 친근한 말투
-  * 반말
   * 정중한 말투
 
 이를 통해 동일한 로직에서 **응답 스타일을 제어**할 수 있습니다.
