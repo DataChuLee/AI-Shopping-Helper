@@ -8,7 +8,7 @@
 - 본 저장소는 FastAPI 기반의 **배송 조회, 상품 조회, 주문 조회 API**와 이를 호출하는 **LLM 기반 에이전트**, 그리고 Streamlit UI 데모를 포함합니다.
 
 ## AI Shopping Helper architecture
-![architecture](images\architecture.png)
+![architecture](images/architecture.png)
 
 ### 1. GPT + Tools(Function Calling)
 
